@@ -1,0 +1,26 @@
+.menuContainer
+  font-family: 'Roboto', sans-serif 
+  display: flex
+  flex-direction: column
+  padding: 20px
+  gap: 40px
+  .menuOptions 
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    button 
+      margin: 10px 10px
+      border-radius: 10px
+      padding: 20px 0px
+      font-size: 1rem
+      font-weight: 700
+      color: #3C3C3B
+      background-color: #eeeeee00
+      border: 2px solid #F9B233
+      cursor: pointer
+      &:hover 
+        background-color: #ccc  
+  .content 
+    transition: opacity 0.5s ease // Propriedade de transição para suavizar a mudança de opacidade
+    //opacity: 1 // Definir a opacidade inicial para 1, ou seja, visível
+    &.hidden 
+      opacity: 0 // Opacidade 0 para esconder o conteúdo
