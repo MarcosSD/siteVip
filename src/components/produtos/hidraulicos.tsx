@@ -39,15 +39,10 @@ const ProdutosHidraulicos = () => {
     <div className={style.container}>
       <div className={style.containerAreaFilmes}>
         <Swiper
-          slidesPerView={width ? width / 300 : 4}
+          slidesPerView={width ? width / 300 : 1}
           spaceBetween={60}
           modules={[Pagination]}
           className="mySwiper"
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
           effect="slide"
           speed={1000}
         >

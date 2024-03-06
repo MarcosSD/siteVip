@@ -1,11 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import useWindowDimensions from '../../utils/resizeWindow'
 
 
 // import required modules
-import { Pagination } from "swiper/modules";
 import style from './style.module.sass'
 //import { useEffect, useState } from 'react'
 
@@ -40,17 +39,41 @@ const Area_Filmes = () => {
     <div className={style.container}>
       <div className={style.containerAreaFilmes}>
         <Swiper
-          slidesPerView={width ? width / 200 : 3}
+          //slidesPerView={width ? width / 200 : 3}
           spaceBetween={3}
-          modules={[Pagination, Navigation, Autoplay]}
+          modules={[Navigation]}
           className="mySwiper"
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
+          id={style.swiper}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+
           }}
-          loop={true}
-          effect="slide"
-          speed={1000}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1366: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }
+          }
+          
+         
         >
           {imagesTigre.map((item, index) => (
             <SwiperSlide key={index} id={style.slideFilme}>
