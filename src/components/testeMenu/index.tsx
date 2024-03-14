@@ -3,6 +3,8 @@ import Header from '../header/header';
 import style from './menu.module.sass'
 
 import ProdutosHidraulicos from '../produtos/hidraulicos';
+import { Divider } from 'antd';
+import Area_Filmes from '../teste-swiper';
 
 // Criação de componentes para exibir diferentes conteúdos
 const ContentA: React.FC = () => <div><Header/></div>;
@@ -19,10 +21,11 @@ const Menu: React.FC = () => {
   return (
     <div className={style.menuContainer}>
       <div className={style.menuOptions}>
+        {<div style={{display: 'none'}}><ProdutosHidraulicos/></div>}
         <button onClick={() => handleItemClick(<ContentA />)}>Argamassas e Rejuntes</button>
         <button onClick={() => handleItemClick(<ContentB />)}>Bacias sanitárias</button>
-        <button onClick={() => handleItemClick(<ContentC />)}>Chuveiros elétricos</button>
-        <button onClick={() => handleItemClick(<ProdutosHidraulicos/>)}>Espelhos e Armários</button>
+        <button onClick={() => handleItemClick(<Area_Filmes />)}>Chuveiros elétricos</button>
+        <button onClick={() => handleItemClick(<Area_Filmes/>)}>Espelhos e Armários</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Ferragens</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Material elétrico</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Material hidráulico</button>
