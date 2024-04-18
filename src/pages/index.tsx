@@ -1,4 +1,5 @@
 import CarouselSuperior from '@/components/CarouselSuperior/carousel'
+import Footer from '@/components/footer/footer'
 import Header from '@/components/header/header'
 import ProdutosHidraulicos from '@/components/produtos/hidraulicos'
 import Area_Filmes from '@/components/teste-swiper'
@@ -9,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Vip Material de Construção</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -17,7 +18,8 @@ export default function Home() {
     <Header />
     <CarouselSuperior />
     <Menu />
-    <Area_Filmes />
+    {/* <Area_Filmes /> */}
+    <Footer />
     </>
   )
 }

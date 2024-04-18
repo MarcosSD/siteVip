@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import useWindowDimensions from '../../utils/resizeWindow'
 
@@ -39,15 +39,21 @@ const Area_Filmes = () => {
     <div className={style.container}>
       <div className={style.containerAreaFilmes}>
         <Swiper
-          //slidesPerView={width ? width / 200 : 3}
-          spaceBetween={3}
-          modules={[Navigation]}
+          slidesPerView={width ? width / 200 : 3}
+          spaceBetween={1}
+          modules={[Navigation, Autoplay]}
           className="mySwiper"
           id={style.swiper}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
 
+          }}
+          loop={true}
+          speed={1000}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
           }}
           breakpoints={{
             640: {

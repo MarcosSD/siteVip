@@ -41,10 +41,14 @@ const ProdutosHidraulicos = () => {
         <Swiper
           slidesPerView={width ? width / 300 : 1}
           spaceBetween={60}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay, Navigation]}
           className="mySwiper"
           effect="slide"
           speed={1000}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
         >
           {imagesTigre.map((item, index) => (
             <SwiperSlide key={index} className={style.slideFilme}>

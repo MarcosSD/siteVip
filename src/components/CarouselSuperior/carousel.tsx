@@ -1,28 +1,28 @@
 import { Carousel } from "antd";
+import Image from "next/image";
+import banner from "../../assets/bannerExemplo.png";
 
 const CarouselSuperior = () => {
   return (
-    <Carousel autoplay arrows={true}
-      style={{ height: "50%", width: "100%", background: "#606aa0" }}
+    <Carousel
+      autoplay
+      effect="scrollx"
+      autoplaySpeed={3000}
     >
       <div>
-        <h3>1</h3>
-        <h3>1</h3>
-        <h3>1</h3>
-        <h3>1</h3>
+        <Image src={banner} alt="1" />
       </div>
       <div>
-        <h3>2</h3>
+        <Image src={banner} alt="1" />
       </div>
       <div>
-        <h3>3</h3>
+        <Image src={banner} alt="1" />
       </div>
       <div>
-        <h3>4</h3>
+        <Image src={banner} alt="1" />
       </div>
-
     </Carousel>
   );
-}
+};
 
 export default CarouselSuperior;
