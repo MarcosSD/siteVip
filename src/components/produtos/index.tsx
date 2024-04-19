@@ -1,12 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+import SwiperCore from 'swiper';
+SwiperCore.use([Navigation, Autoplay, Pagination]);
 
-import useWindowDimensions from '../../utils/resizeWindow'
+import useWindowDimensions from "../../utils/resizeWindow";
 
+import style from "./style.module.sass";
 
-// import required modules
-import style from './style.module.sass'
-//import { useEffect, useState } from 'react'
+import CardsHidraulicos from "../cardProduto/hidraulicos";
 
 import produto1 from "./images/tigre/image1.png";
 import produto2 from "./images/tigre/image2.png";
@@ -17,13 +19,16 @@ import produto6 from "./images/tigre/image3.png";
 import produto7 from "./images/tigre/image2.png";
 import produto8 from "./images/tigre/image1.png";
 import produto9 from "./images/tigre/image4.png";
-import logoTigre from "./images/tigre/Tigre.png"
-import logoKrona from "./images/tigre/Krona.png"
+import logoTigre from "./images/tigre/Tigre.png";
+import logoKrona from "./images/tigre/Krona.png";
 import Image from "next/image";
+import React from "react";
 
 const Hidraulicos = () => {
-
   const { width, height } = useWindowDimensions();
+
+  const nextButton = React.useRef(null);
+  const prevButton = React.useRef(null);
 
   const imagesTigre = [
     produto1,
@@ -40,12 +45,17 @@ const Hidraulicos = () => {
   return (
     <div className={style.container}>
       <div>
-        <Image src={logoTigre} alt="Marca" id={style.img} style={{margin: '50px 0 10px 0'}}/>
+        <Image
+          src={logoTigre}
+          alt="Marca"
+          id={style.img}
+          style={{ margin: "50px 0 10px 0" }}
+        />
       </div>
       <div className={style.containerAreaFilmes}>
         <Swiper
           //slidesPerView={width ? width / 200 : 6}
-          spaceBetween={10}
+          spaceBetween={100}
           modules={[Navigation, Autoplay, Pagination]}
           className="mySwiper"
           id={style.swiper}
@@ -54,6 +64,11 @@ const Hidraulicos = () => {
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
+          }}
+          navigation={{
+            nextEl: nextButton.current,
+            prevEl: prevButton.current,
+            hideOnClick: true,
           }}
           breakpoints={{
             640: {
@@ -76,22 +91,28 @@ const Hidraulicos = () => {
               slidesPerView: 5,
               spaceBetween: 80,
             },
-          }
-          }
+          }}
         >
-          {imagesTigre.map((item, index) => (
+          {CardsHidraulicos.Tigre.map((item, index) => (
             <SwiperSlide key={index} id={style.slideFilme}>
-              <Image src={item} alt="Filme" id={style.img} />
+              {item}
             </SwiperSlide>
           ))}
-          
+
+          <div ref={prevButton} className="swiper-button-prev" id={style.btnProdAnterior}></div>
+          <div ref={nextButton} className="swiper-button-next" id={style.btnProdProx}></div>
         </Swiper>
       </div>
 
       <div className={style.linhaDecorativa}></div>
 
       <div>
-        <Image src={logoKrona} alt="Marca" id={style.img} style={{margin: '30px 0 20px 0'}}/>
+        <Image
+          src={logoKrona}
+          alt="Marca"
+          id={style.img}
+          style={{ margin: "30px 0 20px 0" }}
+        />
       </div>
       <div className={style.containerAreaFilmes}>
         <Swiper
@@ -127,15 +148,13 @@ const Hidraulicos = () => {
               slidesPerView: 5,
               spaceBetween: 80,
             },
-          }
-          }
+          }}
         >
-          {imagesTigre.map((item, index) => (
+          {CardsHidraulicos.Krona.map((item, index) => (
             <SwiperSlide key={index} id={style.slideFilme}>
-              <Image src={item} alt="Filme" id={style.img} />
+              {item}
             </SwiperSlide>
           ))}
-          
         </Swiper>
       </div>
     </div>

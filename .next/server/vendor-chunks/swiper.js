@@ -20,6 +20,16 @@ exports.modules = {
 
 /***/ }),
 
+/***/ "./node_modules/swiper/swiper-bundle.css":
+/*!***********************************************!*\
+  !*** ./node_modules/swiper/swiper-bundle.css ***!
+  \***********************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./node_modules/swiper/swiper.css":
 /*!****************************************!*\
   !*** ./node_modules/swiper/swiper.css ***!
