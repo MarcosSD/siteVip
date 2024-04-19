@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Header from '../header/header';
 import style from './menu.module.sass'
 
-import ProdutosHidraulicos from '../produtos/hidraulicos';
-import { Divider } from 'antd';
-import Area_Filmes from '../teste-swiper';
+import ProdutosHidraulicos from '../produtosAntigo/hidraulicosAntigo';
+import Hidraulicos from '../produtos';
 
 // Criação de componentes para exibir diferentes conteúdos
 const ContentA: React.FC = () => <div><Header/></div>;
@@ -20,22 +19,24 @@ const Menu: React.FC = () => {
 
   return (
     <div className={style.menuContainer}>
+      <h2>Nossos produtos</h2>
+      <div className={style.linhaDecorativa}></div>
       <div className={style.menuOptions}>
         {<div style={{display: 'none'}}><ProdutosHidraulicos/></div>}
         <button onClick={() => handleItemClick(<ContentA />)}>Argamassas e Rejuntes</button>
         <button onClick={() => handleItemClick(<ContentB />)}>Bacias sanitárias</button>
-        <button onClick={() => handleItemClick(<Area_Filmes />)}>Chuveiros elétricos</button>
-        <button onClick={() => handleItemClick(<Area_Filmes/>)}>Espelhos e Armários</button>
+        <button onClick={() => handleItemClick(<Hidraulicos />)}>Chuveiros elétricos</button>
+        <button onClick={() => handleItemClick(<Hidraulicos/>)}>Espelhos e Armários</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Ferragens</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Material elétrico</button>
-        <button onClick={() => handleItemClick(<ContentC />)}>Material hidráulico</button>
+        <button onClick={() => handleItemClick(<Hidraulicos/>)}>Material hidráulico</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Metais e acessórios WC</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Pendentes e Luminárias</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Pisos</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Porcelanato</button>
         <button onClick={() => handleItemClick(<ContentC />)}>Tintas</button>
       </div>
-      <div className={style.content} style={{ opacity: activeContent ? 1 : 0 }}>
+      <div className={style.content}>
         {activeContent}
       </div>
     </div>
