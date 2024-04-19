@@ -15,12 +15,12 @@ export default function useWindowDimensions() {
 
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
+  const handleResize = () => {
+    setWindowDimensions(getWindowDimensions());
+  };
+
   useEffect(() => {
     if (hasWindow) {
-      function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-      }
-
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
     }

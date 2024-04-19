@@ -10,15 +10,6 @@ import style from "./style.module.sass";
 
 import CardsHidraulicos from "../cardProduto/hidraulicos";
 
-import produto1 from "./images/tigre/image1.png";
-import produto2 from "./images/tigre/image2.png";
-import produto3 from "./images/tigre/image3.png";
-import produto4 from "./images/tigre/image4.png";
-import produto5 from "./images/tigre/image4.png";
-import produto6 from "./images/tigre/image3.png";
-import produto7 from "./images/tigre/image2.png";
-import produto8 from "./images/tigre/image1.png";
-import produto9 from "./images/tigre/image4.png";
 import logoTigre from "./images/tigre/Tigre.png";
 import logoKrona from "./images/tigre/Krona.png";
 import Image from "next/image";
@@ -29,18 +20,6 @@ const Hidraulicos = () => {
 
   const nextButton = React.useRef(null);
   const prevButton = React.useRef(null);
-
-  const imagesTigre = [
-    produto1,
-    produto2,
-    produto3,
-    produto4,
-    produto5,
-    produto6,
-    produto7,
-    produto8,
-    produto9,
-  ];
 
   return (
     <div className={style.container}>
@@ -55,7 +34,7 @@ const Hidraulicos = () => {
       <div className={style.containerAreaFilmes}>
         <Swiper
           //slidesPerView={width ? width / 200 : 6}
-          spaceBetween={100}
+          spaceBetween={5}
           modules={[Navigation, Autoplay, Pagination]}
           className="mySwiper"
           id={style.swiper}
@@ -68,7 +47,7 @@ const Hidraulicos = () => {
           navigation={{
             nextEl: nextButton.current,
             prevEl: prevButton.current,
-            hideOnClick: true,
+
           }}
           breakpoints={{
             640: {
@@ -99,8 +78,8 @@ const Hidraulicos = () => {
             </SwiperSlide>
           ))}
 
-          <div ref={prevButton} className="swiper-button-prev" id={style.btnProdAnterior}></div>
-          <div ref={nextButton} className="swiper-button-next" id={style.btnProdProx}></div>
+          {/* <div ref={prevButton} className="swiper-button-prev" id={style.btnProdAnterior}></div>
+          <div ref={nextButton} className="swiper-button-next" id={style.btnProdProx}></div> */}
         </Swiper>
       </div>
 
