@@ -12,7 +12,7 @@ const ContentC: React.FC = () => <div>Conteúdo C</div>;
 
 const Menu: React.FC = () => {
   const [activeContent, setActiveContent] = useState<React.ReactNode | null>(null);
-  const [activeButton, setActiveButton] = useState<string>('');
+  const [activeButton, setActiveButton] = useState<string>('ContentA');
 
   const handleItemClick = (content: React.ReactNode, buttonName: string) => {
     setActiveContent(content);
