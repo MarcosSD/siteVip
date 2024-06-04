@@ -13,7 +13,7 @@ const Footer = () => {
         <div className={style.infoVip}>
           <Image
             src={logoFooter}
-            alt="Vip Matariais de Construção"
+            alt="Vip Material de Construção"
             width={120}
             height={100}
           />

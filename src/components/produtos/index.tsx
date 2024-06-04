@@ -27,7 +27,7 @@ const Hidraulicos = () => {
         <Image
           src={logoTigre}
           alt="Marca"
-          id={style.img}
+          id={style.imagem}
           style={{ margin: "50px 0 10px 0" }}
         />
       </div>
@@ -50,23 +50,34 @@ const Hidraulicos = () => {
 
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            768: {
+            
+            550: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            1024: {
+            
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
+            768: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 80,
             },
             1280: {
-              slidesPerView: 4,
-              spaceBetween: 40,
+              slidesPerView: 5,
+              spaceBetween: 80,
             },
-            1366: {
+            1440: {
               slidesPerView: 5,
               spaceBetween: 80,
             },
@@ -89,7 +100,7 @@ const Hidraulicos = () => {
         <Image
           src={logoKrona}
           alt="Marca"
-          id={style.img}
+          id={style.imagem}
           style={{ margin: "30px 0 20px 0" }}
         />
       </div>

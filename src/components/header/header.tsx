@@ -10,7 +10,7 @@ const Header = () => {
       </div>
       <div className={style.btnsHeader}>
         <a href="http://">VIP Transportes</a>
-        <a href="../../sobre">Sobre nós</a>
+        <a href="../sobre">Sobre nós</a>
       </div>
     </header>
   );

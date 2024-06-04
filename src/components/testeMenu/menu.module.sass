@@ -12,9 +12,21 @@
     color: #3C3C3B
     font-weight: 500
     font-size: 1.9rem
+
   .menuOptions
     display: grid
     grid-template-columns: repeat(4, 1fr)
+    gap: 10px
+
+    @media (max-width: 1200px)
+      grid-template-columns: repeat(3, 1fr)
+      
+    @media (max-width: 900px)
+      grid-template-columns: repeat(2, 1fr)
+      
+    @media (max-width: 600px)
+      display: none
+
     button
       margin: 10px 10px
       border-radius: 10px
@@ -26,9 +38,31 @@
       border: 1px solid #F9B233
       cursor: pointer
       transition: 0.3s
+
       &:hover
         background-color: #c48314
         color: #fff
+        border: 1px solid #b6b6b6
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
+
+  .mobileSelect
+    display: none
+
+    @media (max-width: 600px)
+      display: block
+      margin: 10px auto
+      padding: 15px
+      font-size: 1rem
+      font-weight: 600
+      color: #3C3C3B
+      background-color: #fff
+      border: 1px solid #F9B233
+      border-radius: 10px
+      cursor: pointer
+      transition: 0.3s
+
+      &:hover
+        color: #3C3C3B
         border: 1px solid #b6b6b6
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
 
@@ -39,10 +73,9 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1) !important
 
 .content
-  transition: opacity 0.5s ease // Propriedade de transição para suavizar a mudança de opacidade
-  //opacity: 1 // Definir a opacidade inicial para 1, ou seja, visível
+  transition: opacity 0.5s ease
   &.hidden
-    opacity: 0 // Opacidade 0 para esconder o conteúdo
+    opacity: 0
 
 .linhaDecorativa
   width: 96%
@@ -50,3 +83,8 @@
   height: 2px
   margin-left: 25px
   margin-bottom: 20px
+
+@media (max-width: 600px)
+  .linhaDecorativa
+    width: 100%
+    margin-left: 0

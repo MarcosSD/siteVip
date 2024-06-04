@@ -1,6 +1,6 @@
 .header
   font-family: 'Roboto', sans-serif
-  background-color: #292929
+  background-color: #3C3C3B
   display: flex
   justify-content: space-between
   align-items: center
@@ -23,8 +23,23 @@
     font-size: 1rem
     font-weight: 600
     letter-spacing: 1.5px
+    text-align: center
     margin: 0 30px 0 0
     transition: all 0.2s ease-in-out
     &:hover
       background: #000
       color: #ffc258
+
+
+@media screen and (max-width: 768px)
+  .header
+    flex-direction: column
+    padding: 20px 0
+  .logo
+    margin-bottom: 20px
+  .btnsHeader
+    display: flex
+    flex-direction: column
+    a
+      margin: 0 0 20px 0
+      padding: 10px 20px
