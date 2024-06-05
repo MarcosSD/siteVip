@@ -11,6 +11,11 @@ import img6 from "./images/schneider/tomada.jpg";
 import img7 from "./images/schneider/MiluzInterruptor.jpg";
 import img8 from "./images/schneider/disjuntor.jpg";
 import img9 from './images/schneider/caixa.jpg'
+import img10 from './images/schneider/protetor.jpg'
+
+import img11 from './images/fame/Evidenceinterruptor.webp'
+import img12 from './images/fame/canaletaComFita20x10.webp'
+import img13 from './images/fame/interruptorBipolarSimples.webp'
 
 const CardsEletricos = {
   Sil: [
@@ -77,7 +82,34 @@ const CardsEletricos = {
       codigo="Código: S3B66340"
       nomeBotao="Saiba mais"
     />,
+    <CardProduto
+      imagem={<Image src={img10} alt="Schneider" width={150} height={150} />}
+      nome="Protetor de Surto Easy9 1P 45ka"
+      codigo="Código: EZ9L33145"
+      nomeBotao="Saiba mais"
+    />,
   ],
+
+  Fame : [
+    <CardProduto
+      imagem={<Image src={img11} alt="Fame" width={150} height={150} />}
+      nome="Evidence Interruptor Simples 16A C/Placa"
+      codigo="Código: 2896"
+      nomeBotao="Saiba mais"
+    />,
+    <CardProduto
+      imagem={<Image src={img12} alt="Fame" width={150} height={150} />}
+      nome="Canaleta com Fita Adesiva 20x10mm 2000mm"
+      codigo="Código: 3318"
+      nomeBotao="Saiba mais"
+    />,
+    <CardProduto
+      imagem={<Image src={img13} alt="Fame" width={150} height={150} />}
+      nome="Habitat Interruptor Bipolar Simples 20A/250 SH"
+      codigo="Código: 0342"
+      nomeBotao="Saiba mais"
+    />,
+  ]
 };
 
 export default CardsEletricos;
