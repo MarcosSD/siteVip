@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../header/header';
+import Footer from '../footer/footer';
 import style from './menu.module.sass';
 
 import ProdutosHidraulicos from '../produtosAntigo/hidraulicosAntigo';
-import Hidraulicos from '../produtos';
-import Footer from '../footer/footer';
+import Hidraulicos from '../produtos/Hidraulicos';
+import Eletricos from '../produtos/Eletricos';
 
 const ContentA: React.FC = () => <div><Header/></div>;
 const ContentB: React.FC = () => <div><Hidraulicos/></div>;
@@ -12,7 +13,7 @@ const ContentC: React.FC = () => <div><Footer/></div>;
 
 const Menu = () => {
   const [activeContent, setActiveContent] = useState<React.ReactNode | null>(null);
-  const [activeButton, setActiveButton] = useState('ContentA');
+  const [activeButton, setActiveButton] = useState('Eletricos');
   const [isMobile, setIsMobile] = useState(false);
 
   const handleItemClick = (content: React.ReactNode, buttonName: string) => {
@@ -39,8 +40,8 @@ const Menu = () => {
       case 'ContentC':
         handleItemClick(<ContentC />, 'ContentC');
         break;
-      case 'ContentC2':
-        handleItemClick(<ContentC />, 'ContentC2');
+      case 'Eletricos':
+        handleItemClick(<Eletricos/>, 'Eletricos');
         break;
       case 'Hidraulicos3':
         handleItemClick(<Hidraulicos />, 'Hidraulicos3');
@@ -97,7 +98,7 @@ const Menu = () => {
           <option value="Hidraulicos">Chuveiros elétricos</option>
           <option value="Hidraulicos2">Espelhos e Armários</option>
           <option value="ContentC">Ferragens</option>
-          <option value="ContentC2">Material elétrico</option>
+          <option value="Eletricos">Material elétrico</option>
           <option value="Hidraulicos3">Material hidráulico</option>
           <option value="ContentC3">Metais e acessórios WC</option>
           <option value="ContentC4">Pendentes e Luminárias</option>
@@ -139,8 +140,8 @@ const Menu = () => {
             Ferragens
           </button>
           <button
-            className={activeButton === 'ContentC2' ? style.activeButton : ''}
-            onClick={() => handleItemClick(<ContentC />, 'ContentC2')}
+            className={activeButton === 'Eletricos' ? style.activeButton : ''}
+            onClick={() => handleItemClick(<Eletricos />, 'Eletricos')}
           >
             Material elétrico
           </button>

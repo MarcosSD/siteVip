@@ -2,8 +2,6 @@ import { ReactNode } from 'react';
 import style from './style.module.sass'
 import { WhatsAppOutlined } from '@ant-design/icons';
 
-
-
 export interface Produto {
   imagem?: ReactNode;
   nome?: string;
@@ -11,8 +9,6 @@ export interface Produto {
   preco?: string;
   nomeBotao?: string;
 }
-
-
 
 const CardProduto = (props:Produto) => {
   return (
