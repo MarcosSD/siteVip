@@ -18,8 +18,7 @@
     margin-bottom: 20px
     font-size: 20px
 
-
-.missao
+.missao, .visao, .valores
   display: flex
   justify-content: center
   align-items: flex-start
@@ -29,45 +28,59 @@
   margin-top: 40px
   .areaImg
     align-items: center
-    #imgMi
+    #imgMi, #imgVi
       width: 150px
       height: 120px
-
-.visao
-  display: flex
-  justify-content: center
-  align-items: flex-start
-  padding: 20px
-  width: 50%
-  gap: 30px
-  .areaImg
-    align-items: center
-    
-    #imgVi
-      width: 150px
-      height: 80px
-
-.valores
-  display: flex
-  justify-content: center
-  align-items: flex-start
-  padding: 20px
-  width: 50%
-  gap: 40px
-  .areaImg
-    align-items: center
-    
-    #imgVi
-      width: 140px
-      height: 120px
-    
-
-  
-
-
 
 .decorador
   width: 20px
   height: 3px
   background-color: #F9B233
-  margin: 0px 0 10px 0
+  margin: 0 0 10px 0
+
+@media (max-width: 768px)
+  .missao, .visao, .valores
+    width: 70%
+    flex-direction: column
+    align-items: center
+    text-align: center
+    .areaImg
+      margin-bottom: 20px
+      #imgMi, #imgVi
+        width: 120px
+        height: auto
+  .info1
+    h1
+      font-size: 24px
+    p
+      font-size: 18px
+
+@media (max-width: 480px)
+  .missao, .visao, .valores
+    width: 90%
+    gap: 20px
+    .areaImg
+      #imgMi, #imgVi
+        width: 100px
+        height: auto
+  .info1
+    padding: 15px
+    h1
+      font-size: 20px
+    p
+      font-size: 16px
+
+@media (max-width: 320px)
+  .missao, .visao, .valores
+    width: 100%
+    gap: 15px
+    .areaImg
+      #imgMi, #imgVi
+        width: 80px
+        height: auto
+  .info1
+    padding: 10px
+    h1
+      font-size: 18px
+    p
+      font-size: 14px

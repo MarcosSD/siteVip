@@ -16,6 +16,8 @@ import img10 from './images/schneider/protetor.jpg'
 import img11 from './images/fame/Evidenceinterruptor.webp'
 import img12 from './images/fame/canaletaComFita20x10.webp'
 import img13 from './images/fame/interruptorBipolarSimples.webp'
+import img14 from './images/fame/plugueMacho.webp'
+import img15 from './images/fame/chaveBoia.webp'
 
 const CardsEletricos = {
   Sil: [
@@ -107,6 +109,18 @@ const CardsEletricos = {
       imagem={<Image src={img13} alt="Fame" width={150} height={150} />}
       nome="Habitat Interruptor Bipolar Simples 20A/250 SH"
       codigo="Código: 0342"
+      nomeBotao="Saiba mais"
+    />,
+    <CardProduto
+      imagem={<Image src={img14} alt="Fame" width={150} height={150} />}
+      nome="Plugue Macho 2P+T 10A/250V"
+      codigo="Código: 1729"
+      nomeBotao="Saiba mais"
+    />,
+    <CardProduto
+      imagem={<Image src={img15} alt="Fame" width={150} height={150} />}
+      nome="Chave Boia Elétrica 25A/250V"
+      codigo="Código: 3259"
       nomeBotao="Saiba mais"
     />,
   ]
