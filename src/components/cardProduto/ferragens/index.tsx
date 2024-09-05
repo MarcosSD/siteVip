@@ -2,10 +2,11 @@ import Image from "next/image";
 import CardProduto from "../index";
 
 import img1 from "./images/stam/fechadura-classic-40-3400-roseta-quadrada.jpg";
-// import img2 from "./images/sil/caboFlexivel750.jpg";
-// import img3 from "./images/sil/caboRigidoSIlnax.jpg";
-// import img4 from "./images/sil/caboRigidoSIlnax.jpg";
-// import img5 from "./images/sil/cordaoTorcido.jpg";
+import img2 from "./images/stam/14256-fechadura-1005-trinco-rolete-roseta-quadrada-tetra-externa-cromado-150622-a82525.jpg";
+import img3 from "./images/stam/76331-fixador-magnetico-inox-304-para-porta-inox-.jpg";
+import img4 from "./images/stam/30026-fechadura-classic-55-3200-roseta-quadrada-interna-cromado.jpg";
+import img5 from "./images/stam/40720-fechadura-classic-40-3300-roseta-quadrada-banheiro-black-fosco.jpg";
+import img6 from "./images/stam/41212-fechadura-classic-40-3200-roseta-quadrada-externa-gold.jpg";
 
 // import img6 from "./images/schneider/tomada.jpg";
 // import img7 from "./images/schneider/MiluzInterruptor.jpg";
@@ -23,41 +24,42 @@ const CardsFerragens = {
   Stam: [
     <CardProduto
       imagem={<Image src={img1} alt="Sil" width={150} height={150} />}
-      nome="Fechadura Classic 40 3400 Roseta Quadrada Interna Gold"
+      nome="Fechadura Classic 40 3400 Roseta Quadrada"
       codigo="Código: 41227"
       nomeBotao="Saiba mais"
     />,
-  //   <CardProduto
-  //     imagem={<Image src={img2} alt="Sil" width={150} height={150} />}
-  //     nome="Cabo flexível flexsil BWF 750V 6,0mm (08)"
-  //     codigo="Código: ----"
-  //     nomeBotao="Saiba mais"
-  //   />,
-  //   <CardProduto
-  //     imagem={<Image src={img3} alt="Sil" width={150} height={150} />}
-  //     nome="Cabo rígido Sil Nax HEPR 90° 1 x 6,00mm2 0,6/1kv"
-  //     codigo="Código: ----"
-  //     nomeBotao="Saiba mais"
-  //   />,
-  //   <CardProduto
-  //     imagem={<Image src={img4} alt="Sil" width={150} height={150} />}
-  //     nome="Cabo rígido Sil Nax HEPR 90° 1 x 16,00mm2 0,6/1kv"
-  //     codigo="Código: ----"
-  //     nomeBotao="Saiba mais"
-  //   />,
-  //   <CardProduto
-  //     imagem={<Image src={img5} alt="Sil" width={150} height={150} />}
-  //     nome="Cordão Torcido Sil Branco 300V 2 x 1,50mm2"
-  //     codigo="Código: 33040806"
-  //     nomeBotao="Saiba mais"
-  //   />,
-  //   <CardProduto
-  //     imagem={<Image src={img1} alt="Sil" width={150} height={150} />}
-  //     nome="Cabo Flexível Flexsil BWF 750V 2,5mm (12)"
-  //     codigo="Código: ----"
-  //     nomeBotao="Saiba mais"
-  //   />,
-  // ],
+    <CardProduto
+      imagem={<Image src={img2} alt="Sil" width={150} height={150} />}
+      nome="Fechadura 1005 Roseta Quadrada Cromado"
+      codigo="Código: 14256"
+      nomeBotao="Saiba mais"
+    />,
+    <CardProduto
+      imagem={<Image src={img3} alt="Sil" width={150} height={150} />}
+      nome="Fixador Magnetico Inox 304 Inox Polido Encartelado"
+      codigo="Código: 76331"
+      nomeBotao="Saiba mais"
+    />,
+    <CardProduto
+      imagem={<Image src={img4} alt="Sil" width={150} height={150} />}
+      nome="Fechadura Classic 3200 Roseta Quadrada Cromado"
+      codigo="Código: 30026"
+      nomeBotao="Saiba mais"
+    />,
+    <CardProduto
+      imagem={<Image src={img5} alt="Sil" width={150} height={150} />}
+      nome="Fechadura Classic 3200 Roseta Quadrada Cromado"
+      codigo="Código: 40720"
+      nomeBotao="Saiba mais"
+    />,
+    <CardProduto
+      imagem={<Image src={img6} alt="Sil" width={150} height={150} />}
+      nome="Fechadura Classic 3200 Roseta Quadrada Gold"
+      codigo="Código: 41212"
+      nomeBotao="Saiba mais"
+
+    />,
+  ]
 
   // Schneider: [
   //   <CardProduto
@@ -123,7 +125,6 @@ const CardsFerragens = {
   //     codigo="Código: 3259"
   //     nomeBotao="Saiba mais"
   //   />,
-  ]
 };
 
 export default CardsFerragens;
